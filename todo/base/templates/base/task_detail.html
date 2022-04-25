@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1>Title: {{details.title}}</h1>
+<h1>Created: {{details.created|timesince}} ago</h1>
+<h1>Description</h1>
+{% if not details.description %}
+<p>No description</p>
+{% else %}
+<p>{{details.description}}</p>
+{% endif %}
+{% endblock content %}
